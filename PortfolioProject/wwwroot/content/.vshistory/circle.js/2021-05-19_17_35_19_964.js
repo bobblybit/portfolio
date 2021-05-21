@@ -1,0 +1,54 @@
+﻿document.addEventListener('DOMContentLoaded', () => {
+    let mousePosX = 0,
+        mousePosY = 0,
+        mouseCircle = document.getElementById('mouse-circle');
+
+    document.onmousemove = (e) => {
+        mousePosX = e.pageX;
+        mousePosY = e.pageY;
+    }
+
+    let delay = 6,
+        revisedMousePosX = 0,
+        revisedMousePosY = 0;
+
+    function delayMouseFollow() {
+        requestAnimationFrame(delayMouseFollow);
+
+        revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+        revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
+
+        mouseCircle.style.top = revisedMousePosY + 'px';
+        mouseCircle.style.left = revisedMousePosX + 'px';
+    }
+    delayMouseFollow();
+});
+
+
+
+
+
+$(document).ready(function () {
+
+    var i = 0;
+    var txt = 'hello i am Solomon Young a full stack Developer :) ';
+    var speed = 70;
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("typeMessage").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+
+    }
+    typeWriter();
+
+});
+
+var typed3 = new Typed('#typed3', {
+    strings: ['My strings are: <i>strings</i> with', 'My strings are: <strong>HTML</strong>', 'My strings are: Chars &times; &copy;'],
+    typeSpeed: 60,
+    backSpeed: 60,
+    loop: true
+});

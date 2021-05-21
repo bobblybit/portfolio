@@ -1,0 +1,36 @@
+﻿@model User
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <a class="navbar-brand" href="#">Logo</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link 2</a>
+            </li>
+        </ul>
+
+        <!-- Navbar text-->
+        <span class="navbar-text">
+            Navbar text
+        </span>
+
+    </nav>
+
+
+
+
+    <div>@Model.lastName</div>
+    <div>@Model.firstName</div>
+    <div>@Model.aboutInfo</div>
+    <img src="@Model.profilePictureUrl" alt="Alternate Text" style="width:120px;" />
+    @foreach (var project in Model.projects)
+    {
+        <h3>@project.ID</h3>
+        <h3>@project.projectTitle</h3>
+        <h3>@project.projectDescription</h3>
+        <img src="@project.projectImageUrl" alt="Alternate Text" style="width:200px;" />
+    }

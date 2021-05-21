@@ -1,0 +1,13 @@
+﻿@model PortfolioProject.Models.User
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>@Model.lastName @Model.firstName</title>
+    </head>
+    <body>
+
+       <img src="" alt="Alternate Text" />
+        @Model.projects.ToList()
+    </body>
+    </html>

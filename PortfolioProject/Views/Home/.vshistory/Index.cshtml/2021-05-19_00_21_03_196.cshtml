@@ -1,0 +1,33 @@
+﻿@model HomeViewModel
+
+    <div class="row wrapper  mt-2 no-gutters">
+        <div class="col-md-6 no-gutters">
+            <div class="left-side d-flex justify-content-center">
+                left side
+            </div>
+        </div>
+        <div class="col-md-6 no-gutters">
+            <div class="right-side d-flex justify-content-center align-items-center">
+                <div>@Model.tagLine</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>@Model.lastName</div>
+    <div>@Model.firstName</div>
+    <div>@Model.aboutInfo</div>
+
+
+     @foreach (var Proficiency in Model.Proficiency)
+     {
+        <div>@Proficiency.name</div>
+     }
+
+    <img src="@Model.profilePictureUrl" alt="Alternate Text" style="width:120px;" />
+    @foreach (var project in Model.projects)
+    {
+        <h3>@project.projectTitle</h3>
+        <h3>@project.projectDescription</h3>
+        <img src="@project.projectImageUrl" alt="Alternate Text" style="width:200px;" />
+    }

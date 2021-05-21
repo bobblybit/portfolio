@@ -1,0 +1,40 @@
+﻿body {
+    background-image: url("img_tree.gif");
+    background-image: url('file:///C:\Users\hp\Downloads\c_sharp_hero.png');
+}
+.profile-img-wrapper {
+    margin: 0 auto;
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 500px;
+    top: 30px;
+}
+.right-side, .left-side {
+    width: 100%;
+    height: 50vh;
+}
+
+@media screen and (min-width:760px) {
+    .left-side, .right-side{
+        height: 100vh;
+    }
+}
+
+.right-side{
+    color:#fff;
+    font-size:4.9em;
+    text-align:center;
+}
+.left-side {
+    width: 100%;
+}
+.Hello-note {
+    width: 50%;
+    color: #fff;
+    position: absolute;
+    left: 450px;
+    top: 270px;
+}

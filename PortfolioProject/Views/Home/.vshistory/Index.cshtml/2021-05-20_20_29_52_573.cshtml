@@ -1,0 +1,83 @@
+﻿@model HomeViewModel
+@{
+    Layout = HomeLayout;
+}
+
+<div class="typeMessage" id="typeMessage" style="color: #fff;">Hello I am Solomon Young <span id="typed3" class="typed3" style=""></span></div>
+<div class="row wrapper mt-5 mr-5 no-gutters" style="">
+    <!--<div class="col-md-6 no-gutters fader-item">
+            <div class="left-side">
+                <!--
+                <div class="profile-img-wrapper mt-4 fader-item" id="Profileimg ">
+
+                </div>
+
+                <div class="Hello-note mt-3 ">
+                    Hello I am @Model.lastName @Model.firstName Proficient in
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exur.
+                </div>
+
+    </div>
+        </div>-->
+    <div class="col-md-6 no-gutters fader-item">
+        <div class="right-side d-flex justify-content-center">
+            <div class="mt-5">@Model.tagLine</div>
+        </div>
+    </div>
+</div>
+
+<div class="row no-gutters" style="margin-top:-100px;">
+
+    <div class="col-md-6 about-left no-gutters ">
+        <div id="proficient-intro" class="ml-3">I Proficiently Speak the Following</div>
+        <div class="d-flex mt-3 ml-4 ">
+            @foreach (var Proficiency in Model.Proficiency)
+            {
+                <div class="proficincy-wrapper m-1 parallelogram">
+                    @Proficiency.name
+                </div>
+            }
+        </div>
+
+        <section class="ml-2">
+            <div class="image image1  mr-3" style="float: left;height: 150px;width: 150px;border-radius: 50%;">
+                <img src="https://res.cloudinary.com/decagom/image/upload/v1621193650/porfolio/FaceApp_1611401857576_2_phyum6.jpg" alt="Alternate Text" style="height:100%; width:100%;" />
+            </div>
+            <div class="image image2" style="float: right;height: 70px;width: 70px;border-radius: 50%;">
+                <img src="https://res.cloudinary.com/decagom/image/upload/v1621193650/porfolio/FaceApp_1611401857576_2_phyum6.jpg" alt="Alternate Text" style="height:100%; width:100%;" />
+            </div>
+            <div>
+                <span>Little about me</span>
+            </div>
+            <p class="p-2">
+                @Model.aboutInfo
+            </p>
+        </section>
+
+
+
+    </div>
+    <div class="col-md-6 about-right no-gutters d-flex p-5">
+
+        @foreach (var item in Model.projects)
+        {
+            <div class="card mr-3" style="width: 15rem; height:310px;">
+                <img class="card-img-top" src="@item.projectImageUrl" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card @item.projectTitle</h5>
+                    <p class="card-text">
+                        @item.projectDescription
+                    </p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        }
+
+
+
+
+    </div>
+
+</div>
+

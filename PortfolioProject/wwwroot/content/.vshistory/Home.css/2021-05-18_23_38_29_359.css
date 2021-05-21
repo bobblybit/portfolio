@@ -1,0 +1,16 @@
+﻿.wrapper{
+    width:90%;
+    border:1px solid;
+    margin : 0 auto;
+}
+.right-side, .left-side {
+    width: 90%;
+    height: 100%;
+    border:1px solid;
+}
+.right-side{
+    background-color:red;
+}
+.left-side{
+    background-color:blue;
+}

@@ -1,0 +1,19 @@
+﻿@model PortfolioProject.Models.User
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <title>@Model.lastName @Model.firstName</title>
+    </head>
+    <body>
+        @foreach (var project in Model.projects)
+        {
+        <img src="@project.projectImageUrl" alt="Alternate Text" />
+        <h6>@project.ID</h6>
+        <h6>@project.projectImageUrl</h6>
+        <h6>@project.projectTitle</h6>
+        <h6>@project.projectDescription</h6>
+        }
+       <img src="" alt="Alternate Text" />
+    </body>
+    </html>

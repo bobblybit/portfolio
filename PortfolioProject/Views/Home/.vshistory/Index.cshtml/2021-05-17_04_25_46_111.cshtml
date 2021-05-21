@@ -1,0 +1,13 @@
+﻿@model User
+
+    <div>@Model.lastName</div>
+    <div>@Model.firstName</div>
+    <div>@Model.aboutInfo</div>
+    <img src="@Model.profilePictureUrl" alt="Alternate Text" style="width:120px;" />
+    @foreach (var project in Model.projects)
+    {
+        <h3>@project.ID</h3>
+        <h3>@project.projectTitle</h3>
+        <h3>@project.projectDescription</h3>
+        <img src="@project.projectImageUrl" alt="Alternate Text" style="width:200px;" />
+    }

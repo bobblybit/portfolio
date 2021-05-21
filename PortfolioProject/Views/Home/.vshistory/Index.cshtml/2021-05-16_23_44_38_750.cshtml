@@ -1,0 +1,17 @@
+﻿@model IEnumerable<PortfolioProject.Models.User>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+       @foreach (var User in Model)
+       {
+        <title>@User.firstName @User.lastName</title>
+       }
+    </head>
+    <body>
+        @foreach (var User in Model)
+        {
+            @User.profilePictureUrl
+            @User.firstName
+            @User.lastName
+        }
+    </body>
+    </html>

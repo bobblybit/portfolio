@@ -1,0 +1,10 @@
+﻿.right-side, left-side {
+    width: 90%;
+    height: 100%;
+}
+.right-side{
+    background-color:red;
+}
+.left-side{
+    background-color:blue;
+}

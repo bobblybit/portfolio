@@ -1,0 +1,27 @@
+﻿@model PortfolioProject.ViewModels.LoginViewModel
+
+
+<div class="row border-1">
+    <div class="col contact-parts" >left </div>
+
+    <div class="col contact-parts">
+        <div class="col-md-12">
+            <form method="post" asp-action="Login" asp-controller="Account">
+                <div class="form-group">
+                    <label asp-for="email"></label>
+                    <input placeholder="Email" asp-for="email" class="form-control"  />
+                    <span asp-validation-for="email"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="password"></label>
+                    <input placeholder="Email" asp-for="password" class="form-control" />
+                    <span asp-validation-for="password"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <span asp-validation-for="email"></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

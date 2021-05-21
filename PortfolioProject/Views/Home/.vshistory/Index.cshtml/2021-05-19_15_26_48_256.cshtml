@@ -1,0 +1,51 @@
+﻿@model HomeViewModel
+
+<div class="typeMessage" id="typeMessage" style="color: red;"></div>
+<div class="row wrapper border-info mt-5 mr-5 no-gutters">
+    <div class="col-md-6 no-gutters fader-item">
+        <div class="left-side">
+            <div class="profile-img-wrapper mt-4 fader-item" id="Profileimg ">
+
+            </div>
+            <div class="d-flex justify-content-end "></div>
+            <div class="Hello-note mt-3">
+                Hello I am @Model.lastName @Model.firstName Proficient in
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exur.
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 no-gutters fader-item">
+        <div class="right-side d-flex justify-content-center">
+            <div class="mt-5">@Model.tagLine</div>
+        </div>
+    </div>
+</div>
+
+ <div class="row no-gutters">
+     <div class="col about-left no-gutters">
+     left
+     </div>
+     <div class="col about-right no-gutters">
+      right
+     </div>
+    </div>
+
+
+
+
+    <div>@Model.aboutInfo</div>
+
+
+     @foreach (var Proficiency in Model.Proficiency)
+     {
+        <div>@Proficiency.name</div>
+     }
+
+
+    @foreach (var project in Model.projects)
+    {
+        <h3>@project.projectTitle</h3>
+        <h3>@project.projectDescription</h3>
+        <img src="@project.projectImageUrl" alt="Alternate Text" style="width:200px;" />
+    }
