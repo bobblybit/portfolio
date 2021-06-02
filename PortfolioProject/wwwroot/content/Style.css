@@ -1,18 +1,22 @@
 ﻿@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
 
 body {
-    background-color:  #050100;
+    background-color: #050100;
+}
+#header{
+    color:red;
+    border-bottom:1px solid#5f5d5d;
 }
 /* css for contact us*/
-.contact-parts{
-    width:100%;
-    height:100vh;
-    background-color:#fff;
+.contact-parts {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
 }
 /*circle mouse css*/
 #mouse-circle {
     position: absolute;
-    width: 100px;
+    width: 90px;
     height: 90px;
     margin: -32px 0 0 -32px;
     border: 1px solid #fff;
@@ -55,7 +59,7 @@ a:hover{
 }
 /*message text*/
 .message {
-    font-size: 6.2em;
+    font-size: 6em;
     color: #fff;
     letter-spacing: 0.01em;
     font-family: 'KoHo',sans-serif;
@@ -69,4 +73,11 @@ a:hover{
     font-size: 5em;
     font-weight: bold;
 
+}
+#bicycle {
+    background-image: url("https://res.cloudinary.com/decagom/image/upload/v1622605428/photo-1496147433903-1e62fdb6f4bemec_cths0q.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #fff;
 }
